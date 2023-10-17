@@ -4,7 +4,7 @@ from .models import Product, ProductOrder, Order
 from .serializers import ProductSerializer, ProductOrderSerializer, OrderSerializer
 
 @api_view(['POST'])
-def register_order_product(request):
+def register_order_product(request, produto: ProductOrderSerializer):
     if request.method == 'POST':
         order_product_data = request.data
         print(order_product_data)
